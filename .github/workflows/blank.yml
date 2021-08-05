@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: NuGet/setup-nuget@v1.0.5
+        with:
+          nuget-version: '5.x'
+      - run: nuget restore Solutions/Solutions.sln
+      - uses: microsoft/setup-msbuild@v1
+      - run: msbuild Solutions/Solutions.sln -property:Configuration=Release
