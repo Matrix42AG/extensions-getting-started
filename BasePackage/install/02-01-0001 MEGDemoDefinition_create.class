@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<NewDataSet>
+	<BasicSchemaObjectClass>
+		<ID>67fea353-032c-eb11-7883-005056904260</ID>
+		<Name>MEGDemoDefinition</Name>
+		<IsSchemaObject>0</IsSchemaObject>
+		<DisplayName>Demo Definition</DisplayName>
+		<ProtectionLevel>2</ProtectionLevel>
+		<ClassType>3</ClassType>
+		<DisableHistory>1</DisableHistory>
+	</BasicSchemaObjectClass>
+</NewDataSet>

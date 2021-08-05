@@ -1,0 +1,1 @@
+/*1.0*/DELETE FROM SchemaScripts WHERE Major = 2 AND Minor = 1 AND Build = 1 AND Type = 'class' AND Name = 'f8ddf886-8ac7-c6c6-f259-08d88e270eec_Matrix42 Extensions Getting Started_MEGDemoDefinition_create'

@@ -1,0 +1,12 @@
+﻿{
+  "Id": "94f659a4-48a6-4ded-9998-ba2bf9a45eca",
+  "Vendor": "Matrix42 AG",
+  "Name": "Matrix42 GitHub Extensions Getting Started",
+  "Version": "1.0",
+  "LastUpdatedDate": "0001-01-01T00:00:00",
+  "SetupDirectives": {
+    "MaintenanceMode": false,
+    "RecycleWebApplication": false,
+    "RestartM42WindowsServices": false
+  }
+}

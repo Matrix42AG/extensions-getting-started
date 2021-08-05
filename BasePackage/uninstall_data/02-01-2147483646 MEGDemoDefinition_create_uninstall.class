@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<NewDataSet>
+	<BasicSchemaObjectClass>
+		<ID>67fea353-032c-eb11-7883-005056904260</ID>
+		<Name>MEGDemoDefinition</Name>
+		<ActionOnImport>delete</ActionOnImport>
+	</BasicSchemaObjectClass>
+</NewDataSet>

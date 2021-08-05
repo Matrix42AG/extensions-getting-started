@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SchemaScripts>
+	<Script Major="2" Minor="1" Build="2147483646" Type="class" Name="Matrix42 Extensions Getting Started_MEGDemoDefinition_create_uninstall" PackageVersion="1.0" Register="false" FilePath="uninstall_data\02-01-2147483646 MEGDemoDefinition_create_uninstall.class" />
+	<Script Major="2" Minor="1" Build="2147483647" Type="post" Name="Matrix42 Extensions Getting Started_UnregisterInstallScripts_Data" Register="false" FilePath="uninstall_data\02-01-2147483647 UnregisterInstallScripts_Data.post" />
+</SchemaScripts>
