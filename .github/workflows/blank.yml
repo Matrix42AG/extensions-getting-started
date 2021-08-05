@@ -19,3 +19,11 @@ jobs:
       - run: nuget restore Solutions/Solutions.sln
       - uses: microsoft/setup-msbuild@v1
       - run: msbuild Solutions/Solutions.sln -property:Configuration=Release
+      - uses: actions/setup-node@v2.3.2
+      - run: npm i -g @matrix42/cli
+      - run: m42 login -pat ${{ secrets.M42_DEVOPS_PORTAL_PAT }}
+      - run: m42 generate-extension -m BasePackage/package.json |
+          -o dist/build-${{ github.sha }}.zip |
+          -a Solutions/M42ExtensionsGettingStartedBusinessLogic/bin/Release |
+          -b ${{ github.run_number }} |
+          -om dist/package.json
