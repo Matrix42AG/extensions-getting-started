@@ -29,4 +29,4 @@ jobs:
           [System.IO.File]::WriteAllBytes("identity.pfx", $content)
         shell: powershell
       - run: |
-          npx m42 sign -p dist/build-${{ github.sha }}.zip -i identity.pfx -pwd ${{ secrets.M42_DEVELOPER_IDENTITY_PASSWORD }}
+          npx m42 sign -p dist/build-${{ github.sha }}.zip -i identity.pfx -pwd "${{ secrets.M42_DEVELOPER_IDENTITY_PASSWORD }}"
