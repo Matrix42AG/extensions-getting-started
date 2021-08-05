@@ -23,4 +23,4 @@ jobs:
       - run: npm i @matrix42/cli
       - run: npx m42 login -pat ${{ secrets.M42_DEVOPS_PORTAL_PAT }}
       - run: |
-          npx m42 generate-extension -m BasePackage/package.json -o dist/build-${{ github.sha }}.zip -a Solutions/M42ExtensionsGettingStartedBusinessLogic/bin/Release -b ${{ github.run_number }} -om dist/package.json
+          npx m42 generate-extension -m BasePackage/package.json -o dist/build-${{ github.sha }}.zip -a Solutions/M42ExtensionsGettingStartedBusinessLogic/bin/Release -b ${{ github.run_number }}
