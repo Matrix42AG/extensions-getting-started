@@ -24,3 +24,9 @@ jobs:
       - run: npx m42 login -pat ${{ secrets.M42_DEVOPS_PORTAL_PAT }}
       - run: |
           npx m42 generate-extension -m BasePackage/package.json -o dist/build-${{ github.sha }}.zip -a Solutions/M42ExtensionsGettingStartedBusinessLogic/bin/Release -b ${{ github.run_number }}
+      - run: |
+          $content = [System.Convert]::FromBase64String("${{ secrets.M42_DEVELOPER_IDENTITY }}")
+          [System.IO.File]::WriteAllBytes("identity.pfx", $content)
+        shell: powershell
+      - run: |
+          npx m42 sign -p dist/build-${{ github.sha }}.zip -i identity.pfx -pwd ${{ secrets.M42_DEVELOPER_IDENTITY_PASSWORD }}
