@@ -11,6 +11,8 @@ on:
 jobs:
   build:
     runs-on: windows-latest
+    env:
+      EXTENSION_ID: 28e85158-c4b3-4a7d-ab66-6484fbddeb54
     steps:
       - uses: actions/checkout@v2
       - uses: NuGet/setup-nuget@v1.0.5
@@ -30,3 +32,5 @@ jobs:
         shell: powershell
       - run: |
           npx m42 sign -p build-${{ github.sha }}.zip -i identity.pfx -pwd "${{ secrets.M42_DEVELOPER_IDENTITY_PASSWORD }}"
+      - run: |
+          npx m42 upload-extension -p build-${{ github.sha }}.zip -i ${{ env.EXTENSION_ID }} -e staging
