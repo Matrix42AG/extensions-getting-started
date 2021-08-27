@@ -22,7 +22,7 @@ jobs:
       - uses: microsoft/setup-msbuild@v1
       - run: msbuild Solutions/Solutions.sln -property:Configuration=Release
       - uses: actions/setup-node@v2.3.2
-      - run: npm i @matrix42/cli form-data
+      - run: npm i @matrix42/cli
       - run: npx m42 login -pat ${{ secrets.M42_DEVOPS_PORTAL_PAT }}
       - run: |
           npx m42 generate-extension -m BasePackage/package.json -o build-${{ github.sha }}.zip -a Solutions/M42ExtensionsGettingStartedBusinessLogic/bin/Release -b ${{ github.run_number }}
